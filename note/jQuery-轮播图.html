@@ -1,0 +1,117 @@
+<h2 id="jquery">jQuery</h2>
+
+<blockquote>
+  <p>jQuery 是一个 JavaScript 的函数库，使用它完成js效果。</p>
+</blockquote>
+
+
+
+<h2 id="选择器">选择器</h2>
+
+<ol>
+<li>$(“#test”)  id=”test”</li>
+<li>$(“.test”) class=”test”</li>
+<li>$(“p”)  标签名</li>
+<li>$(“p.test”) 类名为test的p标签</li>
+<li>$(“[href=’#’]”) 属性选择器 ，注意<strong>方括号</strong></li>
+<li>$(“p”).css(“background-color”,”red”);   <strong>CSS 选择器</strong></li>
+</ol>
+
+
+
+<h2 id="可能用到的函数">可能用到的函数</h2>
+
+<ol>
+<li>addClass</li>
+<li>removeClass</li>
+<li>animate</li>
+</ol>
+
+<hr>
+
+
+
+<h2 id="网站">网站</h2>
+
+<p><a href="http://blog.csdn.net/lovesomnus/article/details/24229569">http://blog.csdn.net/lovesomnus/article/details/24229569</a></p>
+
+<hr>
+
+
+
+<h2 id="网页居中">网页居中</h2>
+
+<p><strong>text-align:center;</strong> <br>
+margin:0 auto;</p>
+
+<hr>
+
+<p>使用boot,css,js,<strong>font</strong>文件都要加进来</p>
+
+<hr>
+
+<p><strong>不使用boot中轮播图两边的按钮，怎么把按钮放到图片上 （图片非背景）？</strong></p>
+
+<p>position:absolute;相对于 static 定位以外的第一个父元素进行定位。 <br>
+后面是top,right…不带margin。</p>
+
+<pre><code>**当父层a的position设为relative(相对定位) 子层b的position设为(绝对定位)时,b的偏移是相对于父层a来定位。但是如果a没有设置relative 而b设为absolute,b的定位就是相对于浏览器进行。**
+</code></pre>
+
+<hr>
+
+
+
+<h2 id="jquery-的stop方法">jQuery 的stop()方法</h2>
+
+<pre><code>stop 是jQuery中用于控制页面动画效果的方法。运行之后立刻结束当前页面上的动画效果。
+第一个参数的意思是是否清空动画序列，也就是stop的是当前元素的动画效果还是停止后面附带的所有动画效果，一般为false，跳过当前动画效果，执行下一个动画效果;
+第二个参数是是否将当前动画效果执行到最后，意思就是停止当前动画的时候动画效果刚刚执行了一般，这个时候想要的是动画执行之后的效果，那么这个参数就为true。
+</code></pre>
+
+<hr>
+
+
+
+<h2 id="animate">animate</h2>
+
+<p>({left:nowLeft},500)</p>
+
+<ol>
+<li>nowLeft只能是数字值</li>
+<li>left:”1000px”这种写法注意双引号</li>
+<li>以上写法不用双引号</li>
+</ol>
+
+<p>animate(styles,speed,easing,callback) <br>
+callback:animate 函数执行完之后，要执行的函数。</p>
+
+<hr>
+
+<p>.carousel ul li{ <br>
+}</p>
+
+<hr>
+
+
+
+<h2 id="append-prepend">append() /prepend()</h2>
+
+<p>克隆并追加一个 p 元素：</p>
+
+<pre><code>$("button").click(function(){
+  $("body").append($("p").clone());
+});
+</code></pre>
+
+<p>append() 方法在被选元素的结尾（仍然在内部）插入指定内容。 <br>
+prepend() 方法在被选元素的前面（仍然在内部）插入指定内容。</p>
+
+<hr>
+
+<p>font-size改变boot中图标大小。 <br>
+字体图标的好处在于，可以通过CSS属性来对图标进行自定义（颜色、大小、阴影、渐变等）。</p>
+
+<hr>
+
+<p>$(.carousel ul li:eq(index))注意别忘了eq()。</p>
